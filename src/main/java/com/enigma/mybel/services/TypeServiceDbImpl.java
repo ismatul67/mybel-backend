@@ -1,5 +1,6 @@
 package com.enigma.mybel.services;
 
+import com.enigma.mybel.entity.CategoryRoom;
 import com.enigma.mybel.entity.Type;
 import com.enigma.mybel.repositories.TypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,8 +13,13 @@ public class TypeServiceDbImpl implements TypeService {
     @Autowired
     TypeRepository repository;
 
+    @Autowired
+    CategoryRoomService roomService;
+
     @Override
     public Type saveType(Type type) {
+        CategoryRoom room = roomService.getCategoryByName(type.getRoomName());
+        type.setRoom(room);
         return repository.save(type);
     }
 

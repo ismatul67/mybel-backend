@@ -1,5 +1,6 @@
 package com.enigma.mybel.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.Getter;
 import lombok.Setter;
@@ -25,6 +26,10 @@ public class Type {
     @JoinColumn(name = "id_room")
     @JsonIgnoreProperties(value = {"types","designInteriors"})
     private CategoryRoom room;
+
+    @Transient
+    @JsonBackReference("room")
+    private String roomName;
 
     @OneToMany(mappedBy = "type")
     @JsonIgnoreProperties("type")
@@ -54,6 +59,14 @@ public class Type {
 
     public CategoryRoom getRoom() {
         return room;
+    }
+
+    public String getRoomName() {
+        return roomName;
+    }
+
+    public void setRoomName(String roomName) {
+        this.roomName = roomName;
     }
 
     public void setRoom(CategoryRoom room) {
