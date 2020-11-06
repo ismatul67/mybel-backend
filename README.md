@@ -2,10 +2,11 @@
 
 ## Create Database to mysql
 ```
-1. Open cmd
-2. Insert command : mysql -u db_user -p
-3. Change db_user with your database username, then enter, after that input your password
-4.  insert command: CREATE DATABASE mybel;
+1. Make sure you have installed mysql
+2. Open cmd
+3. Insert command : mysql -u db_user -p
+4. Change db_user with your database username, then enter, after that input your password
+5.  insert command: CREATE DATABASE mybel;
 ```
 ## Run backend
 ```
@@ -71,7 +72,7 @@ now backend is running in port 8081
 4. insert command: use mybel;
 5. insert this command:
 INSERT INTO `mst_category_room` VALUES ('8a8a8c7a759a900b01759aa7c81f0000','Dining Room'),('8a8a8c7a759a900b01759aa829250001','Bed Room'),('8a8a8c7a759a900b01759aa877110002','Office Room'),('8a8a8cec750c44ed01750c5563d60001','Living Room');
-6. insert this command:
+6.  click enter, after that, insert this command:
 INSERT INTO `type` VALUES ('8a8a8c7a759ac93001759ac9e9400000','sofa','8a8a8cec750c44ed01750c5563d60001'),('8a8a8c7a759ac93001759accaf890001','chair','8a8a8cec750c44ed01750c5563d60001'),('8a8a8c7a759ac93001759accf9cf0002','storage','8a8a8cec750c44ed01750c5563d60001'),('8a8a8c7a759ac93001759aceca370003','dining chair',NULL),('8a8a8c7a759ac93001759acf14c60004','dining table',NULL),('8a8a8c7a759ac93001759acf4cd20005','dining cabinet',NULL),('8a8a8c7a759ac93001759acfb01a0006','bed','8a8a8c7a759a900b01759aa829250001'),('8a8a8c7a759ac93001759ad024e90007','mattress','8a8a8c7a759a900b01759aa829250001'),('8a8a8c7a759ac93001759ad06b930008','cabinet','8a8a8c7a759a900b01759aa829250001'),('8a8a8c7a759ac93001759ad15c3a0009','office chair','8a8a8c7a759a900b01759aa877110002'),('8a8a8c7a759ac93001759ad1a68c000a','office table','8a8a8c7a759a900b01759aa877110002'),('8a8a8c7a759ac93001759ad1f81b000b','office cabinet','8a8a8c7a759a900b01759aa877110002');
 ```
 
